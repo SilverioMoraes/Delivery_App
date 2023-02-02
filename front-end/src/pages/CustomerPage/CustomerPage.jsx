@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Container, Row, Col } from 'reactstrap';
 import Navbar from '../../components/Navbar';
 import getAllCustomerOrders from '../../services/getAllCustomerOrders';
 import OrderCard from './Components/OrderCard';
@@ -44,10 +45,20 @@ export default function CustomerPage() {
   return (
     <>
       <Navbar />
-      <h2>Meus Pedidos</h2>
-      {
-        orders ? renderCustomerOrders() : <h1>Loading...</h1>
-      }
+      <Container className="d-grid gap-4">
+        <Row>
+          <Col>
+            <h2>Meus Pedidos</h2>
+          </Col>
+        </Row>
+        <Row>
+          {
+            orders ? renderCustomerOrders() : <h1>Loading...</h1>
+          }
+        </Row>
+
+      </Container>
+
     </>
   );
 }
