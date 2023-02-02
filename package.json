@@ -53,5 +53,10 @@
       "__TESTDESC__": true,
       "__TESTFILE__": true
     }
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "react-bootstrap": "^2.7.0",
+    "reactstrap": "^9.1.5"
   }
 }
