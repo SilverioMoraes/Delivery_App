@@ -11,7 +11,7 @@ export default function SaleCard({ sale }) {
   };
 
   return (
-    <Col xs="12" md="5">
+    <Col xs="12" lg="5">
       <div
         onClick={ directToDetails }
         // referencia JSX ESLint
