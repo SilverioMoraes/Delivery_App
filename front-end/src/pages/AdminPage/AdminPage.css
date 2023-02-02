@@ -1,4 +1,8 @@
 .navbarAdminPage {
   background-color: var(--dark-blue);
+  width: 100%;
 }
 
+.btnSair {
+  background-color: var(--dark-blue);
+}

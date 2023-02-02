@@ -91,6 +91,7 @@ function AdminPage() {
   return (
     <main>
       <NavbarAdmin />
+      <h3>Cadastrar novo usuário.</h3>
       <input
         type="text"
         data-testid="admin_manage__input-name"
