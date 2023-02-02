@@ -7,9 +7,9 @@
   --light-gray: #EAF1EF;
 }
 
-* {
+/* * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
-}
+} */
