@@ -52,8 +52,10 @@ export default function SaleCard({ sale }) {
             </div>
           </div>
 
-          <div data-testid={ `seller_orders__element-card-address-${id}` }
-          className="py-1 px-3 border">
+          <div
+            data-testid={ `seller_orders__element-card-address-${id}` }
+            className="py-1 px-3 border"
+          >
             Endereço:
             {' '}
             {sale.deliveryAddress}
