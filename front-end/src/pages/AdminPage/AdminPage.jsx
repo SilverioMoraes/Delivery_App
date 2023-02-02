@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import NavbarAdmin from '../../components/NavbarAdmin';
 import adminService from '../../services/postAdminManagement';
 import RenderUserAdmin from './components/AdminPageUser';
 
@@ -89,6 +90,7 @@ function AdminPage() {
 
   return (
     <main>
+      <NavbarAdmin />
       <input
         type="text"
         data-testid="admin_manage__input-name"
