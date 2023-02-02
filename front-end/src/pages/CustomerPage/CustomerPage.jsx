@@ -45,13 +45,13 @@ export default function CustomerPage() {
   return (
     <>
       <Navbar />
-      <Container className="d-grid gap-4">
+      <Container className="d-flex flex-column gap-2 mt-4">
         <Row>
           <Col>
-            <h2>Meus Pedidos</h2>
+            <h3>Meus Pedidos</h3>
           </Col>
         </Row>
-        <Row>
+        <Row className="d-flex gap-4 justify-content-center">
           {
             orders ? renderCustomerOrders() : <h1>Loading...</h1>
           }
