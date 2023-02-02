@@ -8,8 +8,15 @@
 
 .Entregue {
   background-color: var(--green-alt);
+  color: white;
 }
 
 .Preparando {
-  background-color: var(--off-white);
+  background-color: grey;
+  color: white;
+}
+
+.EmTransito {
+  background-color: rgb(60, 60, 60);
+  color: white;
 }

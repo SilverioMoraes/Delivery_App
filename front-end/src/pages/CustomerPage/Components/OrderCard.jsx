@@ -25,7 +25,8 @@ export default function OrderCard({ id, status, saleDate, totalPrice }) {
         </span>
         <span
           data-testid={ `customer_orders__element-delivery-status-${id}` }
-          className={ `${status} p-3 rounded fw-bold` }
+          className={ `${status === 'Em Trânsito' ? 'EmTransito' : status}
+          p-3 rounded fw-bold` }
         >
           { status }
 
