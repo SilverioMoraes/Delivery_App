@@ -5,7 +5,7 @@
 }
 
 .nameInput:hover {
-  background-color: rgb(104, 201, 243);
+  background-color: rgb(178, 233, 255);
 }
 
 .nameInput::placeholder {
@@ -19,7 +19,7 @@
 }
 
 .emailInput:hover {
-  background-color: rgb(104, 201, 243);
+  background-color: rgb(178, 233, 255);
 }
 
 .emailInput::placeholder {
@@ -33,7 +33,7 @@
 }
 
 .passwordInput:hover {
-  background-color: rgb(104, 201, 243);
+  background-color: rgb(178, 233, 255);
 }
 
 .passwordInput::placeholder {
@@ -59,6 +59,8 @@
 .btnCadastrar:hover {
   background-color: rgb(3, 119, 168);
   border: 2px solid rgb(3, 119, 168);
+  transition: 1000ms;
+  translate: 2px -8px;
 }
 
 /* .sectionTable {
