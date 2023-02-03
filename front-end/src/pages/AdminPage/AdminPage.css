@@ -45,6 +45,7 @@
 
 .btnCadastrar {
   background-color: var(--dark-blue);
+  border: 2px solid  var(--dark-blue);
   border-radius: 10px;
 }
 
@@ -67,6 +68,7 @@
 
 .btnExcluir {
   background-color: var(--green-alt);
+  border: 2px solid var(--green-alt);
   border-radius: 10px;
 }
 
