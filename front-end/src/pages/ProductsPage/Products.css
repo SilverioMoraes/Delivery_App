@@ -1,0 +1,21 @@
+.btn-dark-blue {
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  color: var(--off-white);
+}
+
+.img-products {
+  max-height: 250px;
+  max-width: 150px;
+}
+
+.card-body-product {
+  background-color: var(--gray);
+  height: 40px;
+  width: 120px;
+}
+
+.border {
+  border: box 4px solid red;
+}
+

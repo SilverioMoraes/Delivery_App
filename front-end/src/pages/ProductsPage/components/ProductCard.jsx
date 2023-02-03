@@ -1,3 +1,4 @@
+import { Container, Row, Col } from 'reactstrap';
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { capitalizeFirstLetter } from '../../../utils/strings';
@@ -93,51 +94,54 @@ export default function ProductCard({ product, cart, setCart }) {
   }, []);
 
   return (
-    <div>
-      <section>
-        <img
-          src={ product.urlImage }
-          data-testid={ `customer_products__img-card-bg-image-${product.id}` }
-          alt={ `${capitalizeFirstLetter(product.name)} illustration.` }
-        />
-        <p data-testid={ `customer_products__element-card-price-${product.id}` }>
-          {priceFormatted}
-        </p>
-      </section>
-
-      <section>
-        <p data-testid={ `customer_products__element-card-title-${product.id}` }>
-          { product.name }
-        </p>
-
-        <div>
-          <button
-            data-testid={ `customer_products__button-card-add-item-${product.id}` }
-            type="button"
-            onClick={ handleOnClickAddProduct }
-          >
-            Add
-          </button>
-
-          <input
-            data-testid={ `customer_products__input-card-quantity-${product.id}` }
-            value={ quantity }
-            onChange={ ({ target: { value } }) => {
-              setQuantity(Number(value));
-              product.quantity = Number(quantity);
-            } }
+    <Col xs="2" class="card">
+      <div className="border border-danger">
+        <section>
+          <img
+            className="card-img-top img-products"
+            src={ product.urlImage }
+            data-testid={ `customer_products__img-card-bg-image-${product.id}` }
+            alt={ `${capitalizeFirstLetter(product.name)} illustration.` }
           />
+          <p data-testid={ `customer_products__element-card-price-${product.id}` }>
+            {priceFormatted}
+          </p>
+        </section>
 
-          <button
-            data-testid={ `customer_products__button-card-rm-item-${product.id}` }
-            type="button"
-            onClick={ handleOnClickRemoveProduct }
-          >
-            Remove
-          </button>
-        </div>
-      </section>
-    </div>
+        <section className="card-body card-body-product">
+          <p data-testid={ `customer_products__element-card-title-${product.id}` }>
+            { product.name }
+          </p>
+
+          <div className="d-flex flex-nowrap">
+            <button
+              data-testid={ `customer_products__button-card-add-item-${product.id}` }
+              type="button"
+              onClick={ handleOnClickAddProduct }
+            >
+              Add
+            </button>
+
+            <input
+              data-testid={ `customer_products__input-card-quantity-${product.id}` }
+              value={ quantity }
+              onChange={ ({ target: { value } }) => {
+                setQuantity(Number(value));
+                product.quantity = Number(quantity);
+              } }
+            />
+
+            <button
+              data-testid={ `customer_products__button-card-rm-item-${product.id}` }
+              type="button"
+              onClick={ handleOnClickRemoveProduct }
+            >
+              Remove
+            </button>
+          </div>
+        </section>
+      </div>
+    </Col>
   );
 }
 

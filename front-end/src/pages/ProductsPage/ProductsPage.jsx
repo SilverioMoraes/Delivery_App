@@ -1,8 +1,10 @@
+import { Container, Row, Col } from 'reactstrap';
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import getAllProductsService from '../../services/getAllProductsService';
 import ProductCard from './components/ProductCard';
+import './Products.css';
 
 export default function ProductsPage() {
   const history = useHistory();
@@ -41,34 +43,43 @@ export default function ProductsPage() {
   }, [cart]);
 
   return (
-    <section>
-      <Navbar />
-      <button
-        data-testid="customer_products__button-cart"
-        type="button"
-        onClick={ () => history.push('/customer/checkout') }
-        disabled={ isDisabled }
-      >
-        <span> Ver Carrinho: R$ </span>
-        <span data-testid="customer_products__checkout-bottom-value">
-          {' '}
-          {totalPrice.toLocaleString('pt-br', {
-            style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2,
-          })}
-          {' '}
-        </span>
-      </button>
-      <div>
-        {
-          products.map((product) => (
-            <ProductCard
-              key={ product.id }
-              product={ product }
-              cart={ cart }
-              setCart={ setCart }
-            />))
-        }
-      </div>
-    </section>
+    <Container className="d-flex gap-4">
+      <section>
+        <Row>
+          <Navbar />
+        </Row>
+        <Row xs="2" className="d-flex justify-content-end align-content-end">
+          <button
+            className="btn-dark-blue"
+            data-testid="customer_products__button-cart"
+            type="button"
+            onClick={ () => history.push('/customer/checkout') }
+            disabled={ isDisabled }
+          >
+            <span> Ver Carrinho: R$ </span>
+            <span data-testid="customer_products__checkout-bottom-value">
+              {' '}
+              {totalPrice.toLocaleString('pt-br', {
+                style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2,
+              })}
+              {' '}
+            </span>
+          </button>
+        </Row>
+        <Row>
+          <div className="d-flex flex-wrap gap-4 justify-content-center">
+            {
+              products.map((product) => (
+                <ProductCard
+                  key={ product.id }
+                  product={ product }
+                  cart={ cart }
+                  setCart={ setCart }
+                />))
+            }
+          </div>
+        </Row>
+      </section>
+    </Container>
   );
 }
