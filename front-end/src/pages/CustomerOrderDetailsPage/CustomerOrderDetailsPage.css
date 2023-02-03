@@ -8,12 +8,16 @@
   color: #001813;
 }
 
+.customer-order-container {
+  padding: 2rem;
+}
+
 .order-title {
-  font-size: 36px;
   font-weight: 500;
   line-height: 42px;
   letter-spacing: 0em;
   text-align: left;
+  margin-left: 1.5rem;
 }
 
 .order-description {
@@ -22,7 +26,7 @@
   align-items: center;
   flex-direction:row;
   background-color: #EAF1EF;
-  font-size: 36px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 36px;
   letter-spacing: 0em;
@@ -37,14 +41,14 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  font-size: 36px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 42px;
   letter-spacing: 0em;
   text-align: left;
   background-color: #EAF1EF;
   border-radius: 20px 20px 20px 20px;
-  height: 65px;
+  height: 50px;
   margin: 10px;
 }
 
@@ -62,7 +66,7 @@
   border-radius: 20px 0px 0px 20px;
   padding: 5px;
   width: 10%;
-  height: 65px;
+  height: 50px;
 }
 
 .order-product {
@@ -70,7 +74,7 @@
   align-items: center;
   justify-content: center;
   padding: 5px;
-  height: 65px;
+  height: 50px;
   width: 45%;
 }
 
@@ -80,7 +84,7 @@
   justify-content: center;
   background-color: #034C6B;
   color: #F2FFFC;
-  height: 65px;
+  height: 50px;
   width: 15%;
   padding: 5px;
 }
@@ -91,7 +95,7 @@
   justify-content: center;
   background-color:#9EB3C2;
   color: #F2FFFC;
-  height: 65px;
+  height: 50px;
   width: 15%;
   padding: 5px;
 }
@@ -102,7 +106,7 @@
   justify-content: center;
   background-color: #748B75;
   color: #F2FFFC;
-  height: 65px;
+  height: 50px;
   width: 15%;
   padding: 5px;
   border-radius: 0px 20px 20px 0px;
@@ -123,8 +127,8 @@
   margin: 10px;
   padding: 10px;
   border-radius: 20px 20px 20px 20px;
-  width: 500px;
-  font-size: 48px;
+  width: 200px;
+  font-size: 1.75rem;
   font-weight: 700;
   line-height: 56px;
   letter-spacing: 0em;

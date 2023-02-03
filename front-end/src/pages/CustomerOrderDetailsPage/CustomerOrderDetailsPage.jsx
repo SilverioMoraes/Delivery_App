@@ -48,45 +48,48 @@ export default function CustomerOrderDetailsPage() {
   return (
     <div>
       <Navbar />
-      <h3 className="order-title">Detalhe do pedido</h3>
-      <div className="order-details">
-        <div className="order-description">
-          <span>{`Pedido ${id} `}</span>
-          <span>{`Vendedor(a) ${sellerName} `}</span>
-          <span>
-            { products.length > 0
-            && new Date(products[0].sales.saleDate).toLocaleDateString('pt-br')}
-          </span>
-          <span>{`Status do pedido ${saleStatus} `}</span>
-          <button
-            type="button"
-            onClick={ handleClick }
-            disabled={ saleStatus !== 'Em Trânsito' }
-          >
-            MARCAR COMO ENTREGUE
-          </button>
-        </div>
-        <div>
-          {products.map((order, index) => (
-            <ProductDetailsRowOrder
-              key={ order.products.id }
-              product={ order.products }
-              quantity={ order.quantity }
-              index={ index }
-              pageName="order_details"
-            />
-          ))}
-        </div>
-        <div className="total-price-div">
-          <div className="total-price">
-            <span>Total: &nbsp;</span>
+      <div className="customer-order-container">
+        <h3 className="order-title">Detalhes do pedido</h3>
+        <div className="order-details">
+          <div className="order-description">
+            <span>{`Pedido ${id} `}</span>
+            <span>{`Vendedor(a) ${sellerName} `}</span>
             <span>
-              { getTotalPrice() }
+              { products.length > 0
+            && new Date(products[0].sales.saleDate).toLocaleDateString('pt-br')}
             </span>
+            <span>{`Status do pedido: ${saleStatus} `}</span>
+            <button
+              type="button"
+              onClick={ handleClick }
+              disabled={ saleStatus !== 'Em Trânsito' }
+            >
+              MARCAR COMO ENTREGUE
+            </button>
           </div>
+          <div>
+            {products.map((order, index) => (
+              <ProductDetailsRowOrder
+                key={ order.products.id }
+                product={ order.products }
+                quantity={ order.quantity }
+                index={ index }
+                pageName="order_details"
+              />
+            ))}
+          </div>
+          <div className="total-price-div">
+            <div className="total-price">
+              <span>Total: &nbsp;</span>
+              <span>
+                { getTotalPrice() }
+              </span>
+            </div>
 
+          </div>
         </div>
       </div>
+
     </div>
   );
 }
