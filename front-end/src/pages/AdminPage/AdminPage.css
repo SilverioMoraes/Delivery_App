@@ -1,7 +1,7 @@
 .nameInput {
   border-radius: 8px;
-  margin-left: 5px;
-  width: 200px;
+  height: 2rem;
+  width: 100%;
 }
 
 .nameInput:hover {
@@ -14,8 +14,8 @@
 
 .emailInput {
   border-radius: 8px;
-  margin-left: 5px;
-  width: 200px;
+  height: 2rem;
+  width: 100%;
 }
 
 .emailInput:hover {
@@ -28,8 +28,8 @@
 
 .passwordInput {
   border-radius: 8px;
-  margin-left: 5px;
-  width: 200px;
+  height: 2rem;
+  width: 100%;
 }
 
 .passwordInput:hover {
@@ -43,7 +43,7 @@
 .roleSelect {
   border-radius: 8px;
   color: rgb(3, 119, 168);
-  margin-left: 5px;
+  height: 2rem;
 }
 
 .roleSelect:hover {
@@ -54,7 +54,6 @@
   background-color: var(--dark-blue);
   border: 2px solid  var(--dark-blue);
   border-radius: 10px;
-  margin-left: 5px;
 }
 
 .btnCadastrar:hover {
@@ -62,9 +61,24 @@
   border: 2px solid rgb(3, 119, 168);
 }
 
-.trTableUser {
+/* .sectionTable {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+} */
+
+/* .trThTableUser {
   border: 2px solid red;
-}
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+} */
+
+/* .trTdTableUser {
+  border: 2px solid green;
+} */
 
 .indexUser {
   color: rgb(0, 24, 19);
@@ -85,7 +99,7 @@
 .btnExcluir {
   background-color: var(--gray);
   border: 2px solid var(--gray);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .btnExcluir:hover {

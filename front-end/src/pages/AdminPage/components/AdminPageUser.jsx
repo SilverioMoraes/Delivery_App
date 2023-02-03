@@ -59,9 +59,9 @@ function RenderUserAdmin({ refresh }) {
   });
 
   return (
-    <table>
-      <thead>
-        <tr className="trTableUser font-Roboto fs-5 fw-light">
+    <table className="table table-striped">
+      <thead className="trThTableUser">
+        <tr className="font-Roboto fs-5 fw-light">
           <th>Item</th>
           <th>Nome</th>
           <th>Email</th>

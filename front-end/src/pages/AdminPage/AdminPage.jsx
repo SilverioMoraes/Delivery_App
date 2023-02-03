@@ -1,4 +1,4 @@
-import { Container } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import NavbarAdmin from '../../components/NavbarAdmin';
@@ -94,68 +94,91 @@ function AdminPage() {
     <main>
       <NavbarAdmin />
       <Container sm="12">
-        <h3 className="font-Roboto fs-2 fw-light">Cadastrar novo usuário.</h3>
-        <section className="shadow-sm p-3 mb-5 bg-body rounded">
-          <span>Nome</span>
-          <input
-            className="nameInput"
-            type="text"
-            data-testid="admin_manage__input-name"
-            placeholder="Nome e sobrenome"
-            value={ name }
-            onChange={ ({ target: { value } }) => setName(value) }
-          />
-          <span className="ms-1">Email</span>
-          <input
-            className="emailInput"
-            type="email"
-            data-testid="admin_manage__input-email"
-            placeholder="seu-email@site.com.br"
-            value={ email }
-            onChange={ ({ target: { value } }) => setEmail(value) }
-          />
-          <span className="ms-1">Senha</span>
-          <input
-            className="passwordInput"
-            type="password"
-            data-testid="admin_manage__input-password"
-            placeholder="********"
-            value={ password }
-            onChange={ ({ target: { value } }) => setPassword(value) }
-          />
-          <span className="ms-1">Tipo</span>
-          <select
-            className="roleSelect"
-            data-testid="admin_manage__select-role"
-            name="select"
-            value={ role }
-            onChange={ ({ target: { value } }) => setRole(value) }
+        <h3 className="font-Roboto fs-2 fw-light mt-3">Cadastrar novo usuário.</h3>
+        <Row>
+          <section
+            className="
+          shadow-sm p-3 mb-5 bg-body rounded d-flex
+          gap-2 align-items-center justify-content-center"
           >
-            <option data-testid="select-option" value="default">Default</option>
-            <option data-testid="select-option" value="seller">Vendedor</option>
-            <option data-testid="select-option" value="customer">Cliente</option>
-          </select>
-          <button
-            className="btnCadastrar text-white font-Roboto fs-5"
-            type="button"
-            data-testid="admin_manage__button-register"
-            disabled={ adminRegisBtnDisable }
-            onClick={ handleClickAdminRegister }
-          >
-            Cadastrar
-          </button>
-          { !errorMessage && (
-            <p
-              data-testid="admin_manage__element-invalid-register"
-            >
-              Register invalid!
-            </p>
-          )}
-        </section>
+            <Col xs="2">
+              Nome
+              <input
+                id="name"
+                className="nameInput"
+                type="text"
+                data-testid="admin_manage__input-name"
+                placeholder="Nome e sobrenome"
+                value={ name }
+                onChange={ ({ target: { value } }) => setName(value) }
+              />
+            </Col>
+
+            <Col xs="2">
+              <span className="ms-1">Email</span>
+              <input
+                id="email"
+                className="emailInput"
+                type="email"
+                data-testid="admin_manage__input-email"
+                placeholder="seu-email@site.com.br"
+                value={ email }
+                onChange={ ({ target: { value } }) => setEmail(value) }
+              />
+            </Col>
+
+            <Col xs="2">
+              <span className="ms-1">Senha</span>
+              <input
+                className="passwordInput"
+                type="password"
+                data-testid="admin_manage__input-password"
+                placeholder="********"
+                value={ password }
+                onChange={ ({ target: { value } }) => setPassword(value) }
+              />
+            </Col>
+
+            <Col xs="2" className="d-flex flex-column">
+              <span className="ms-1">Tipo</span>
+              <select
+                id="Tipo"
+                className="roleSelect"
+                data-testid="admin_manage__select-role"
+                name="select"
+                value={ role }
+                onChange={ ({ target: { value } }) => setRole(value) }
+              >
+                <option data-testid="select-option" value="default">Default</option>
+                <option data-testid="select-option" value="seller">Vendedor</option>
+                <option data-testid="select-option" value="customer">Cliente</option>
+              </select>
+            </Col>
+
+            <Col xs="2" className="align-self-end">
+              <button
+                className="btnCadastrar text-white font-Roboto fs-5"
+                type="button"
+                data-testid="admin_manage__button-register"
+                disabled={ adminRegisBtnDisable }
+                onClick={ handleClickAdminRegister }
+              >
+                Cadastrar
+              </button>
+            </Col>
+            { !errorMessage && (
+              <p
+                data-testid="admin_manage__element-invalid-register"
+              >
+                Register invalid!
+              </p>
+            )}
+          </section>
+        </Row>
 
         <h3 className="font-Roboto fs-2 fw-light">Lista de Usuários.</h3>
 
-        <section className="shadow-sm p-3 mb-5 bg-body rounded">
+        <section className="sectionTable shadow-sm p-3 mb-5 bg-body rounded">
           <RenderUserAdmin
             refresh={ refresh }
             setRefresh={ setRefresh }

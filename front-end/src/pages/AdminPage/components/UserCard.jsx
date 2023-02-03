@@ -4,7 +4,7 @@ import btnDelete from '../../../images/btnDelete.svg';
 
 function UserCard({ index, name, email, role, id, deleteUser }) {
   return (
-    <tr key={ index }>
+    <tr className="trTdTableUser" key={ index }>
       <td
         className="indexUser font-Roboto fs-3"
         data-testid={
@@ -24,7 +24,7 @@ function UserCard({ index, name, email, role, id, deleteUser }) {
 
       </td>
       <td
-        className="emailUser text-white font-Roboto fs-4"
+        className="emailUser font-Roboto fs-4"
         data-testid={
           `admin_manage__element-user-table-email-${index}`
         }
@@ -33,7 +33,7 @@ function UserCard({ index, name, email, role, id, deleteUser }) {
 
       </td>
       <td
-        className="roleUser text-white font-Roboto fs-4"
+        className="roleUser font-Roboto fs-4"
         data-testid={
           `admin_manage__element-user-table-role-${index}`
         }
