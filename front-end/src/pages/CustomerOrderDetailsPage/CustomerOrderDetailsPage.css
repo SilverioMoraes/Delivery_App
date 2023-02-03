@@ -18,7 +18,7 @@
 
 .order-description {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction:row;
   background-color: #EAF1EF;
@@ -46,6 +46,12 @@
   border-radius: 20px 20px 20px 20px;
   height: 65px;
   margin: 10px;
+}
+
+.span-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .order-number {

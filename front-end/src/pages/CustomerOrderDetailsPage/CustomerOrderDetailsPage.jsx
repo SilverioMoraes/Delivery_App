@@ -79,7 +79,7 @@ export default function CustomerOrderDetailsPage() {
         </div>
         <div className="total-price-div">
           <div className="total-price">
-            <span>Total: </span>
+            <span>Total: &nbsp;</span>
             <span>
               { getTotalPrice() }
             </span>
