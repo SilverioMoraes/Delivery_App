@@ -54,6 +54,10 @@
   border: 2px solid  var(--dark-blue);
 }
 
+.indexUser {
+  color: rgb(0, 24, 19);
+}
+
 .nameUser {
   background-color: var(--light-gray);
 }
@@ -67,11 +71,12 @@
 }
 
 .btnExcluir {
-  background-color: var(--green-alt);
-  border: 2px solid var(--green-alt);
+  background-color: var(--gray);
+  border: 2px solid var(--gray);
   border-radius: 10px;
 }
 
 .btnExcluir:hover {
-  background-color: rgb(68, 105, 66);
+  background-color: rgb(202, 17, 17);
+  border: 2px solid rgb(202, 17, 17);
 }

@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import '../AdminPage.css';
+import btnDelete from '../../../images/btnDelete.svg';
 
 function UserCard({ index, name, email, role, id, deleteUser }) {
   return (
     <tr key={ index }>
       <td
-        className="indexUser"
+        className="indexUser font-Roboto fs-3"
         data-testid={
           `admin_manage__element-user-table-item-number-${index}`
         }
@@ -14,7 +15,7 @@ function UserCard({ index, name, email, role, id, deleteUser }) {
 
       </td>
       <td
-        className="nameUser"
+        className="nameUser font-Roboto fs-4"
         data-testid={
           `admin_manage__element-user-table-name-${index}`
         }
@@ -23,7 +24,7 @@ function UserCard({ index, name, email, role, id, deleteUser }) {
 
       </td>
       <td
-        className="emailUser text-white"
+        className="emailUser text-white font-Roboto fs-4"
         data-testid={
           `admin_manage__element-user-table-email-${index}`
         }
@@ -32,7 +33,7 @@ function UserCard({ index, name, email, role, id, deleteUser }) {
 
       </td>
       <td
-        className="roleUser text-white"
+        className="roleUser text-white font-Roboto fs-4"
         data-testid={
           `admin_manage__element-user-table-role-${index}`
         }
@@ -42,14 +43,14 @@ function UserCard({ index, name, email, role, id, deleteUser }) {
       </td>
       <td>
         <button
-          className="btnExcluir text-white font-Roboto fs-5"
+          className="btnExcluir"
           data-testid={
             `admin_manage__element-user-table-remove-${index}`
           }
           type="button"
           onClick={ () => deleteUser(id) }
         >
-          Excluir
+          <img src={ btnDelete } alt="" />
         </button>
       </td>
     </tr>
