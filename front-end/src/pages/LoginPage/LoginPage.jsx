@@ -114,10 +114,12 @@ export default function LoginPage() {
         } }
       >
         <Row
-          className="d-flex justify-content-center px-5 pt-5"
+          className="d-flex justify-content-center
+          align-items-center flex-column px-5 pt-5"
         >
 
           <img src={ logo } alt="" className="w-25" />
+
           <Label htmlFor="login-email-input" text="Email">
 
             <Input

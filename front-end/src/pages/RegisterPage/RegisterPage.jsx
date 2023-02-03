@@ -99,10 +99,11 @@ function RegisterPage() {
       >
 
         <Row
-          className="d-flex justify-content-center px-5 pt-5"
+          className="d-flex justify-content-center
+          align-items-center flex-column px-5 pt-5"
         >
 
-          <img src={ logo } alt="" className="w-25" />
+          <img src={ logo } alt="" className="w-25 d-block" />
 
           <h2 className="text-center">Cadastro</h2>
 
