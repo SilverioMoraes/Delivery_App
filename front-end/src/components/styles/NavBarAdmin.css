@@ -11,9 +11,21 @@
 
 .btnSair:hover {
   background-color: rgb(3, 119, 168);
-  border: 2px solid  var(--dark-blue);
+  border: 2px solid var(--dark-blue);
 }
 
 .logo {
   max-height: 50px;
+}
+
+.navbar_username {
+  display: none;
+}
+
+@media ( min-width : 576px ) {
+
+  .navbar_username {
+    display: block;
+  }
+
 }
