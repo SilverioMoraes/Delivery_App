@@ -5,6 +5,8 @@ export default function Label({
   htmlFor,
   className,
   text,
+  Svg,
+  svgOnClick,
 }) {
   return (
     <label
@@ -19,12 +21,18 @@ export default function Label({
         { text }
       </span>
       {children}
+
+      <span className="align-self-end position-absolute pe-3 mt-3">
+        {Svg && <Svg type="button" onClick={ svgOnClick } width={ 24 } height={ 24 } />}
+      </span>
     </label>
   );
 }
 
 Label.defaultProps = {
   className: '',
+  Svg: '',
+  svgOnClick: () => {},
 };
 
 Label.propTypes = {
@@ -35,4 +43,6 @@ Label.propTypes = {
   htmlFor: PropTypes.string.isRequired,
   className: PropTypes.string,
   text: PropTypes.string.isRequired,
+  Svg: PropTypes.node,
+  svgOnClick: PropTypes.func,
 };

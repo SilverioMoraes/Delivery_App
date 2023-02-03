@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
+import { Eye, EyeSlash } from 'react-bootstrap-icons';
 import { registerService } from '../../services/useLoginService';
 import Button from '../LoginPage/components/Button';
 import Input from '../LoginPage/components/Input';
@@ -17,6 +18,8 @@ function RegisterPage() {
   const [isEmailValid, setEmailValid] = useState(false);
   const [isPasswordValid, setPasswordValid] = useState(false);
   const [isRegisterBtnDisabled, setIsRegisterBtnDisabled] = useState(true);
+
+  const [isPasswordShown, setIsPasswordShown] = useState(false);
 
   const [emailExists, setEmailExist] = useState(true);
 
@@ -78,6 +81,10 @@ function RegisterPage() {
     }
   };
 
+  function handleOnClickPasswordEyeSvg() {
+    setIsPasswordShown(!isPasswordShown);
+  }
+
   return (
     <Container
       className={ `p-0 m-0 d-flex align-items-center
@@ -129,9 +136,14 @@ function RegisterPage() {
             />
           </Label>
 
-          <Label htmlFor="register-password-input" text="Senha">
+          <Label
+            htmlFor="register-password-input"
+            text="Senha"
+            Svg={ isPasswordShown ? EyeSlash : Eye }
+            svgOnClick={ () => handleOnClickPasswordEyeSvg() }
+          >
             <Input
-              type="text"
+              type={ isPasswordShown ? 'text' : 'password' }
               id="register-password-input"
               placeholder="Sua senha"
               dataTestId="common_register__input-password"
