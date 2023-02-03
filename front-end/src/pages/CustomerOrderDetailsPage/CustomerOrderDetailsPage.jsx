@@ -51,7 +51,7 @@ export default function CustomerOrderDetailsPage() {
       <div className="customer-order-container">
         <h3 className="order-title">Detalhes do pedido</h3>
         <div className="order-details">
-          <div className="order-description">
+          <div className="order-description py-3">
             <span>{`Pedido ${id} `}</span>
             <span>{`Vendedor(a) ${sellerName} `}</span>
             <span>
@@ -63,6 +63,7 @@ export default function CustomerOrderDetailsPage() {
               type="button"
               onClick={ handleClick }
               disabled={ saleStatus !== 'Em Trânsito' }
+              className="btn btn-secondary"
             >
               MARCAR COMO ENTREGUE
             </button>
