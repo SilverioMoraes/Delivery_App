@@ -1,8 +1,10 @@
+import { Container } from 'reactstrap';
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import NavbarAdmin from '../../components/NavbarAdmin';
 import adminService from '../../services/postAdminManagement';
 import RenderUserAdmin from './components/AdminPageUser';
+import './AdminPage.css';
 
 function AdminPage() {
   const [name, setName] = useState('');
@@ -91,57 +93,75 @@ function AdminPage() {
   return (
     <main>
       <NavbarAdmin />
-      <h3>Cadastrar novo usuário.</h3>
-      <input
-        type="text"
-        data-testid="admin_manage__input-name"
-        placeholder="Nome e sobrenome"
-        value={ name }
-        onChange={ ({ target: { value } }) => setName(value) }
-      />
-      <input
-        type="email"
-        data-testid="admin_manage__input-email"
-        placeholder="seu-email@site.com.br"
-        value={ email }
-        onChange={ ({ target: { value } }) => setEmail(value) }
-      />
-      <input
-        type="password"
-        data-testid="admin_manage__input-password"
-        placeholder="********"
-        value={ password }
-        onChange={ ({ target: { value } }) => setPassword(value) }
-      />
-      <select
-        data-testid="admin_manage__select-role"
-        name="select"
-        value={ role }
-        onChange={ ({ target: { value } }) => setRole(value) }
-      >
-        <option data-testid="select-option" value="default">Default</option>
-        <option data-testid="select-option" value="seller">Vendedor</option>
-        <option data-testid="select-option" value="customer">Cliente</option>
-      </select>
-      <button
-        type="button"
-        data-testid="admin_manage__button-register"
-        disabled={ adminRegisBtnDisable }
-        onClick={ handleClickAdminRegister }
-      >
-        Cadastrar
-      </button>
-      { !errorMessage && (
-        <p
-          data-testid="admin_manage__element-invalid-register"
-        >
-          Register invalid!
-        </p>
-      )}
-      <RenderUserAdmin
-        refresh={ refresh }
-        setRefresh={ setRefresh }
-      />
+      <Container sm="12" className="border border-primary">
+        <h3 className="font-Roboto fs-2 fw-light">Cadastrar novo usuário.</h3>
+        <section className="shadow-sm p-3 mb-5 bg-body rounded">
+          <span>Nome</span>
+          <input
+            className="input-group-text"
+            type="text"
+            data-testid="admin_manage__input-name"
+            placeholder="Nome e sobrenome"
+            value={ name }
+            onChange={ ({ target: { value } }) => setName(value) }
+          />
+          <span>Email</span>
+          <input
+            className="input-group-text"
+            type="email"
+            data-testid="admin_manage__input-email"
+            placeholder="seu-email@site.com.br"
+            value={ email }
+            onChange={ ({ target: { value } }) => setEmail(value) }
+          />
+          <span>Senha</span>
+          <input
+            className="input-group-text"
+            type="password"
+            data-testid="admin_manage__input-password"
+            placeholder="********"
+            value={ password }
+            onChange={ ({ target: { value } }) => setPassword(value) }
+          />
+          <span>Tipo</span>
+          <select
+            className="input-group-text"
+            data-testid="admin_manage__select-role"
+            name="select"
+            value={ role }
+            onChange={ ({ target: { value } }) => setRole(value) }
+          >
+            <option data-testid="select-option" value="default">Default</option>
+            <option data-testid="select-option" value="seller">Vendedor</option>
+            <option data-testid="select-option" value="customer">Cliente</option>
+          </select>
+          <button
+            className="btnCadastrar text-white"
+            type="button"
+            data-testid="admin_manage__button-register"
+            disabled={ adminRegisBtnDisable }
+            onClick={ handleClickAdminRegister }
+          >
+            Cadastrar
+          </button>
+          { !errorMessage && (
+            <p
+              data-testid="admin_manage__element-invalid-register"
+            >
+              Register invalid!
+            </p>
+          )}
+        </section>
+
+        <h3 className="font-Roboto fs-2 fw-light">Lista de Usuários.</h3>
+
+        <section className="shadow-sm p-3 mb-5 bg-body rounded">
+          <RenderUserAdmin
+            refresh={ refresh }
+            setRefresh={ setRefresh }
+          />
+        </section>
+      </Container>
     </main>
   );
 }

@@ -5,4 +5,13 @@
 
 .btnSair {
   background-color: var(--dark-blue);
+  border-radius: 12px;
+}
+
+.btnCadastrar {
+  background-color: var(--dark-blue);
+}
+
+.btnCadastrar:hover {
+  background-color: rgb(3, 119, 168);
 }
