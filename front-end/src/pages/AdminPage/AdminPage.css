@@ -1,0 +1,77 @@
+.nameInput {
+  border-radius: 8px;
+}
+
+.nameInput:hover {
+  background-color: rgb(104, 201, 243);
+}
+
+.nameInput::placeholder {
+  color: rgb(3, 119, 168);
+}
+
+.emailInput {
+  border-radius: 8px;
+}
+
+.emailInput:hover {
+  background-color: rgb(104, 201, 243);
+}
+
+.emailInput::placeholder {
+  color: rgb(3, 119, 168);
+}
+
+.passwordInput {
+  border-radius: 8px;
+}
+
+.passwordInput:hover {
+  background-color: rgb(104, 201, 243);
+}
+
+.passwordInput::placeholder {
+  color: rgb(3, 119, 168);
+}
+
+.roleSelect {
+  border-radius: 8px;
+  color: rgb(3, 119, 168);
+}
+
+.roleSelect:hover {
+  background-color: rgb(178, 233, 255);
+}
+
+.btnCadastrar {
+  background-color: var(--dark-blue);
+  border: 2px solid  var(--dark-blue);
+  border-radius: 10px;
+}
+
+.btnCadastrar:hover {
+  background-color: rgb(3, 119, 168);
+  border: 2px solid  var(--dark-blue);
+}
+
+.nameUser {
+  background-color: var(--light-gray);
+}
+
+.emailUser {
+  background-color: var(--dark-blue);
+}
+
+.roleUser {
+  background-color: var(--gray);
+}
+
+.btnExcluir {
+  background-color: var(--green-alt);
+  border: 2px solid var(--green-alt);
+  border-radius: 10px;
+}
+
+.btnExcluir:hover {
+  background-color: rgb(68, 105, 66);
+}
