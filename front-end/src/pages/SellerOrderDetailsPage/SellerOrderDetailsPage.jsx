@@ -5,6 +5,7 @@ import getOneSaleDetails from '../../services/getOneSaleDetails';
 import getSaleProducts from '../../services/getSaleProducts';
 import updateOrderStatus from '../../services/updateOrderStatus';
 import SaleProductsTable from './components/SaleProductsTable';
+import './SellerDetails.css';
 
 const PREPARANDO = 'Preparando';
 const PENDENTE = 'Pendente';
@@ -53,7 +54,7 @@ export default function SellerOrderDetailsPage() {
           <h3>Detalhes do Pedido</h3>
         </Row>
 
-        <Row className="d-flex align-items-center border py-3">
+        <Row className="d-flex align-items-center border py-3 gap-2">
           <Col className="d-flex gap-4">
             <div
               data-testid="seller_order_details__element-order-details-label-order-id"
@@ -106,21 +107,28 @@ export default function SellerOrderDetailsPage() {
         <Row>
           <SaleProductsTable saleProducts={ saleProducts } />
         </Row>
-        <Row>
-          <span>
-            Preço Total:
-            {' '}
-          </span>
-          <div data-testid="seller_order_details__element-order-total-price">
-            {String(sale.totalPrice).replace('.', ',')}
-          </div>
+
+        <Row className="border py-2">
           <div>
-            Endereço:
+            Endereço para entrega:
             {' '}
             {sale.deliveryAddress}
             ,
             {sale.deliveryNumber}
           </div>
+        </Row>
+        <Row
+          data-testid="seller_order_details__element-order-total-price"
+        >
+          <Col
+            xs={ { size: 10, offset: 1 } }
+            sm={ { size: 6, offset: 2 } }
+            className="seller_totalPrice py-2 px-3 rounded border text-white fs-4"
+          >
+            Preço Total:
+            {' R$'}
+            {String(sale.totalPrice).replace('.', ',')}
+          </Col>
         </Row>
       </Container>
     </div>

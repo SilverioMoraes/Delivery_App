@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 export default function SaleProductsTable({ saleProducts }) {
   return (
-    <table>
+    <table className="table table-striped table-hover">
       <thead>
         <tr>
           <th> Item </th>
