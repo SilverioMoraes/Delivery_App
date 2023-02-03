@@ -105,7 +105,7 @@ function AdminPage() {
             value={ name }
             onChange={ ({ target: { value } }) => setName(value) }
           />
-          <span>Email</span>
+          <span className="ms-1">Email</span>
           <input
             className="emailInput"
             type="email"
@@ -114,7 +114,7 @@ function AdminPage() {
             value={ email }
             onChange={ ({ target: { value } }) => setEmail(value) }
           />
-          <span>Senha</span>
+          <span className="ms-1">Senha</span>
           <input
             className="passwordInput"
             type="password"
@@ -123,7 +123,7 @@ function AdminPage() {
             value={ password }
             onChange={ ({ target: { value } }) => setPassword(value) }
           />
-          <span>Tipo</span>
+          <span className="ms-1">Tipo</span>
           <select
             className="roleSelect"
             data-testid="admin_manage__select-role"

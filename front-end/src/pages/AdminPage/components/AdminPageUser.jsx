@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import deleteUserService from '../../../services/deleteUserService';
 import getAllUsers from '../../../services/getAllUsers';
 import UserCard from './UserCard';
+import '../AdminPage.css';
 
 function RenderUserAdmin({ refresh }) {
   const [users, setUsers] = useState([]);
@@ -60,7 +61,7 @@ function RenderUserAdmin({ refresh }) {
   return (
     <table>
       <thead>
-        <tr className="font-Roboto fs-5 fw-light justify-content-between">
+        <tr className="trTableUser font-Roboto fs-5 fw-light">
           <th>Item</th>
           <th>Nome</th>
           <th>Email</th>

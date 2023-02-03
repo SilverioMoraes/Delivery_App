@@ -1,5 +1,7 @@
 .nameInput {
   border-radius: 8px;
+  margin-left: 5px;
+  width: 200px;
 }
 
 .nameInput:hover {
@@ -12,6 +14,8 @@
 
 .emailInput {
   border-radius: 8px;
+  margin-left: 5px;
+  width: 200px;
 }
 
 .emailInput:hover {
@@ -24,6 +28,8 @@
 
 .passwordInput {
   border-radius: 8px;
+  margin-left: 5px;
+  width: 200px;
 }
 
 .passwordInput:hover {
@@ -37,6 +43,7 @@
 .roleSelect {
   border-radius: 8px;
   color: rgb(3, 119, 168);
+  margin-left: 5px;
 }
 
 .roleSelect:hover {
@@ -47,11 +54,16 @@
   background-color: var(--dark-blue);
   border: 2px solid  var(--dark-blue);
   border-radius: 10px;
+  margin-left: 5px;
 }
 
 .btnCadastrar:hover {
   background-color: rgb(3, 119, 168);
-  border: 2px solid  var(--dark-blue);
+  border: 2px solid rgb(3, 119, 168);
+}
+
+.trTableUser {
+  border: 2px solid red;
 }
 
 .indexUser {
