@@ -120,6 +120,10 @@ export default function LoginPage() {
 
           <img src={ logo } alt="" className="w-25" />
 
+          <h2 className="text-center pt-3">
+            Login
+          </h2>
+
           <Label htmlFor="login-email-input" text="Email">
 
             <Input
