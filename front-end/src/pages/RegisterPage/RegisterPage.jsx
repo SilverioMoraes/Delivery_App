@@ -1,6 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import { Col, Container, Row } from 'reactstrap';
 import { registerService } from '../../services/useLoginService';
+import Button from '../LoginPage/components/Button';
+import Input from '../LoginPage/components/Input';
+import Label from '../LoginPage/components/Label';
+import styles from './RegisterPage.module.css';
+import logo from '../../images/silverio_lanches_logo.png';
 
 function RegisterPage() {
   const [name, setName] = useState('');
@@ -73,51 +79,91 @@ function RegisterPage() {
   };
 
   return (
-    <main>
-      <div>Cadastro</div>
-      <input
-        type="text"
-        placeholder="Seu nome"
-        data-testid="common_register__input-name"
-        value={ name }
-        onChange={ ({ target: { value } }) => setName(value) }
-      />
-      <input
-        type="text"
-        placeholder="Seu email"
-        data-testid="common_register__input-email"
-        value={ email }
-        onChange={ ({ target: { value } }) => setEmail(value) }
-      />
-      <input
-        type="text"
-        placeholder="Sua senha"
-        data-testid="common_register__input-password"
-        value={ password }
-        onChange={ ({ target: { value } }) => setPassword(value) }
-      />
-      <button
-        type="button"
-        data-testid="common_register__button-register"
-        disabled={ isRegisterBtnDisabled }
-        onClick={ handleClickInvalid }
+    <Container
+      className={ `p-0 m-0 d-flex align-items-center
+      ${styles.registerPageContainer} ${styles.registerPageBg}` }
+      style={ { fontFamily: 'Roboto' } }
+    >
+      <Col
+        xs={ { offset: 2, size: 8 } }
+        sm={ { offset: 2, size: 8 } }
+        md={ { offset: 3, size: 6 } }
+        xl={ { offset: 4, size: 4 } }
+        className="d-flex flex-column p-0"
+        style={ {
+          backgroundColor: '#EAF1EFCC',
+          borderRadius: '4px',
+          boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+          zIndex: '1',
+        } }
       >
-        Cadastrar
-      </button>
 
-      { !emailExists && (
-        <p
-          data-testid="common_register__element-invalid_register"
+        <Row
+          className="d-flex justify-content-center px-5 pt-5"
         >
-          Register invalid!
-        </p>
-      )}
-      {/* <p
-        data-testid="common_register__element-invalid_register"
-      >
-        This email is invalid!
-      </p> */}
-    </main>
+
+          <img src={ logo } alt="" className="w-25" />
+
+          <h2 className="text-center">Cadastro</h2>
+
+          <Label htmlFor="register-name-input" text="Nome">
+            <Input
+              type="text"
+              id="register-name-input"
+              placeholder="Seu nome"
+              dataTestId="common_register__input-name"
+              value={ name }
+              onChange={ ({ target: { value } }) => setName(value) }
+            />
+          </Label>
+
+          <Label htmlFor="register-email-input" text="Email">
+            <Input
+              type="text"
+              id="register-email-input"
+              placeholder="Seu email"
+              dataTestId="common_register__input-email"
+              value={ email }
+              onChange={ ({ target: { value } }) => setEmail(value) }
+            />
+          </Label>
+
+          <Label htmlFor="register-password-input" text="Senha">
+            <Input
+              type="text"
+              id="register-password-input"
+              placeholder="Sua senha"
+              dataTestId="common_register__input-password"
+              value={ password }
+              onChange={ ({ target: { value } }) => setPassword(value) }
+            />
+          </Label>
+
+          <Button
+            dataTestId="common_register__button-register"
+            disabled={ isRegisterBtnDisabled }
+            onClick={ handleClickInvalid }
+            style={ {
+              backgroundColor: '#034C6B',
+              color: 'white',
+              opacity: isRegisterBtnDisabled && '0.6',
+              transition: '200ms',
+            } }
+          >
+            Cadastrar
+          </Button>
+
+          <p
+            data-testid="common_register__element-invalid_register"
+          >
+        &nbsp;
+            {' '}
+            {!emailExists && 'Register invalid!'}
+          </p>
+        </Row>
+      </Col>
+
+    </Container>
   );
 }
 

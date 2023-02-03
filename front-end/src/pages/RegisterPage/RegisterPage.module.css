@@ -1,10 +1,10 @@
-.loginPageContainer {
+.registerPageContainer {
   min-width: 100vw;
   min-height: 100vh;
   position: relative;
 }
 
-.loginPageContainer:after {
+.registerPageContainer:after {
   height: 100vh;
   width: 100vw;
   content: '';
@@ -12,8 +12,8 @@
   position: absolute;
 }
 
-.loginPageBg:after {
-  background:url('../../images/login-page-bg.jpeg');
+.registerPageBg:after {
+  background:url('../../images/register-page-bg.jpeg');
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;

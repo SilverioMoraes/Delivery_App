@@ -6,6 +6,7 @@ import Button from './components/Button';
 import Input from './components/Input';
 import styles from './LoginPage.module.css';
 import Label from './components/Label';
+import logo from '../../images/silverio_lanches_logo.png';
 
 export default function LoginPage() {
   const [doesUserExist, setDoesUserExist] = useState(true);
@@ -96,7 +97,7 @@ export default function LoginPage() {
   return (
     <Container
       className={ `p-0 m-0 d-flex align-items-center
-        ${styles.loginPageContainer}` }
+        ${styles.loginPageContainer} ${styles.loginPageBg}` }
       style={ { fontFamily: 'Roboto' } }
     >
       <Col
@@ -115,6 +116,8 @@ export default function LoginPage() {
         <Row
           className="d-flex justify-content-center px-5 pt-5"
         >
+
+          <img src={ logo } alt="" className="w-25" />
           <Label htmlFor="login-email-input" text="Email">
 
             <Input
