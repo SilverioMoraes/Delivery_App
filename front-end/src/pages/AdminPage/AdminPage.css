@@ -1,17 +1,29 @@
-.navbarAdminPage {
-  background-color: var(--dark-blue);
-  width: 100%;
-}
-
-.btnSair {
-  background-color: var(--dark-blue);
-  border-radius: 12px;
-}
-
 .btnCadastrar {
   background-color: var(--dark-blue);
+  border-radius: 10px;
 }
 
 .btnCadastrar:hover {
   background-color: rgb(3, 119, 168);
+}
+
+.btnExcluir {
+  background-color: var(--green-alt);
+  border-radius: 10px;
+}
+
+.btnExcluir:hover {
+  background-color: rgb(68, 105, 66);
+}
+
+.roleUser {
+  background-color: var(--gray);
+}
+
+.emailUser {
+  background-color: var(--dark-blue);
+}
+
+.nameUser {
+  background-color: var(--light-gray);
 }

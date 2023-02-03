@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
+import '../AdminPage.css';
 
 function UserCard({ index, name, email, role, id, deleteUser }) {
   return (
     <tr key={ index }>
       <td
+        className="input-group-text"
         data-testid={
           `admin_manage__element-user-table-item-number-${index}`
         }
@@ -12,6 +14,7 @@ function UserCard({ index, name, email, role, id, deleteUser }) {
 
       </td>
       <td
+        className="nameUser"
         data-testid={
           `admin_manage__element-user-table-name-${index}`
         }
@@ -20,6 +23,7 @@ function UserCard({ index, name, email, role, id, deleteUser }) {
 
       </td>
       <td
+        className="emailUser text-white"
         data-testid={
           `admin_manage__element-user-table-email-${index}`
         }
@@ -28,6 +32,7 @@ function UserCard({ index, name, email, role, id, deleteUser }) {
 
       </td>
       <td
+        className="roleUser text-white"
         data-testid={
           `admin_manage__element-user-table-role-${index}`
         }
@@ -37,6 +42,7 @@ function UserCard({ index, name, email, role, id, deleteUser }) {
       </td>
       <td>
         <button
+          className="btnExcluir text-white"
           data-testid={
             `admin_manage__element-user-table-remove-${index}`
           }

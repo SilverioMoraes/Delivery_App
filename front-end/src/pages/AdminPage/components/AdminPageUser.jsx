@@ -60,7 +60,7 @@ function RenderUserAdmin({ refresh }) {
   return (
     <table>
       <thead>
-        <tr className="font-Roboto fs-5 fw-light">
+        <tr className="font-Roboto fs-5 fw-light justify-content-between">
           <th>Item</th>
           <th>Nome</th>
           <th>Email</th>
