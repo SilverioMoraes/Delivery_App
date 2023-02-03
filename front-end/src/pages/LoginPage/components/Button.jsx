@@ -6,6 +6,7 @@ export default function Button({
   disabled,
   children,
   style,
+  className,
 }) {
   return (
     <button
@@ -23,7 +24,7 @@ export default function Button({
         fontFamily: 'Roboto',
         fontSize: '20px',
       } }
-      className="d-flex justify-content-center align-items-center mt-3"
+      className={ `d-flex justify-content-center align-items-center mt-3 ${className}` }
     >
       {children}
     </button>
@@ -34,6 +35,7 @@ Button.defaultProps = {
   disabled: false,
   dataTestId: '',
   style: {},
+  className: '',
 };
 
 Button.propTypes = {
@@ -42,4 +44,5 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   dataTestId: PropTypes.string,
   style: PropTypes.objectOf(),
+  className: PropTypes.string,
 };

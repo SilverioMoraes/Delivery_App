@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
-import { Eye, EyeSlash } from 'react-bootstrap-icons';
+import { Eye, EyeSlash, ArrowLeftSquare } from 'react-bootstrap-icons';
 import { registerService } from '../../services/useLoginService';
 import Button from '../LoginPage/components/Button';
 import Input from '../LoginPage/components/Input';
@@ -112,8 +112,6 @@ function RegisterPage() {
 
           <img src={ logo } alt="" className="w-25 d-block" />
 
-          <h2 className="text-center">Cadastro</h2>
-
           <Label htmlFor="register-name-input" text="Nome">
             <Input
               type="text"
@@ -164,6 +162,25 @@ function RegisterPage() {
             } }
           >
             Cadastrar
+          </Button>
+
+          <Button
+            onClick={ () => history.push('/login') }
+            style={ {
+              backgroundColor: '#EAF1EFCC',
+              color: '#034C6B',
+              borderColor: '#034C6B' } }
+          >
+            <span>
+              Tela de Login
+            </span>
+
+            <ArrowLeftSquare
+              strokeWidth="2px"
+              className="ms-3"
+              width={ 24 }
+              height={ 24 }
+            />
           </Button>
 
           <p
