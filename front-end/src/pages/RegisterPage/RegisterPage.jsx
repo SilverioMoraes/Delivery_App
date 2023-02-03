@@ -156,10 +156,11 @@ function RegisterPage() {
 
           <p
             data-testid="common_register__element-invalid_register"
+            className="text-center text-danger fw-bold pt-3"
           >
-        &nbsp;
+            &nbsp;
             {' '}
-            {!emailExists && 'Register invalid!'}
+            { !emailExists && 'This email is already is use' }
           </p>
         </Row>
       </Col>
