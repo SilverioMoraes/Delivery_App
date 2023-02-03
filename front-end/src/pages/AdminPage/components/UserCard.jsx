@@ -5,7 +5,7 @@ function UserCard({ index, name, email, role, id, deleteUser }) {
   return (
     <tr key={ index }>
       <td
-        className="input-group-text"
+        className="indexUser"
         data-testid={
           `admin_manage__element-user-table-item-number-${index}`
         }
@@ -42,7 +42,7 @@ function UserCard({ index, name, email, role, id, deleteUser }) {
       </td>
       <td>
         <button
-          className="btnExcluir text-white"
+          className="btnExcluir text-white font-Roboto fs-5"
           data-testid={
             `admin_manage__element-user-table-remove-${index}`
           }

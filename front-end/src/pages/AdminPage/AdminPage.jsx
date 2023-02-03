@@ -93,12 +93,12 @@ function AdminPage() {
   return (
     <main>
       <NavbarAdmin />
-      <Container sm="12" className="border border-primary">
+      <Container sm="12">
         <h3 className="font-Roboto fs-2 fw-light">Cadastrar novo usuário.</h3>
         <section className="shadow-sm p-3 mb-5 bg-body rounded">
           <span>Nome</span>
           <input
-            className="input-group-text"
+            className="nameInput"
             type="text"
             data-testid="admin_manage__input-name"
             placeholder="Nome e sobrenome"
@@ -107,7 +107,7 @@ function AdminPage() {
           />
           <span>Email</span>
           <input
-            className="input-group-text"
+            className="emailInput"
             type="email"
             data-testid="admin_manage__input-email"
             placeholder="seu-email@site.com.br"
@@ -116,7 +116,7 @@ function AdminPage() {
           />
           <span>Senha</span>
           <input
-            className="input-group-text"
+            className="passwordInput"
             type="password"
             data-testid="admin_manage__input-password"
             placeholder="********"
@@ -125,7 +125,7 @@ function AdminPage() {
           />
           <span>Tipo</span>
           <select
-            className="input-group-text"
+            className="roleSelect"
             data-testid="admin_manage__select-role"
             name="select"
             value={ role }
@@ -136,7 +136,7 @@ function AdminPage() {
             <option data-testid="select-option" value="customer">Cliente</option>
           </select>
           <button
-            className="btnCadastrar text-white"
+            className="btnCadastrar text-white font-Roboto fs-5"
             type="button"
             data-testid="admin_manage__button-register"
             disabled={ adminRegisBtnDisable }
