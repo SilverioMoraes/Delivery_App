@@ -1,21 +1,29 @@
-.btn-dark-blue {
+.btn-viwe-cart {
   background-color: var(--dark-blue);
-  border-radius: 10px;
+  border-radius: 6px;
   color: var(--off-white);
 }
 
-.img-products {
-  max-height: 250px;
-  max-width: 150px;
+.container-card-products {
+  max-height: 100%;
 }
 
-.card-body-product {
+.container-card {
+  box-shadow: 10px 5px 5px rgb(117, 109, 109);
+}
+
+.img {
+  max-height: 15em;
+}
+
+.btbAddOrRemove {
+  background-color: var(--dark-blue);
+}
+
+.infCard {
   background-color: var(--gray);
-  height: 40px;
-  width: 120px;
 }
 
-.border {
-  border: box 4px solid red;
+.inputQuantity{
+  width: 25%;
 }
-

@@ -1,4 +1,3 @@
-import { Container, Row, Col } from 'reactstrap';
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
@@ -43,43 +42,53 @@ export default function ProductsPage() {
   }, [cart]);
 
   return (
-    <Container className="d-flex gap-4">
-      <section>
-        <Row>
-          <Navbar />
-        </Row>
-        <Row xs="2" className="d-flex justify-content-end align-content-end">
-          <button
-            className="btn-dark-blue"
-            data-testid="customer_products__button-cart"
-            type="button"
-            onClick={ () => history.push('/customer/checkout') }
-            disabled={ isDisabled }
-          >
-            <span> Ver Carrinho: R$ </span>
-            <span data-testid="customer_products__checkout-bottom-value">
-              {' '}
-              {totalPrice.toLocaleString('pt-br', {
-                style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2,
-              })}
-              {' '}
-            </span>
-          </button>
-        </Row>
-        <Row>
-          <div className="d-flex flex-wrap gap-4 justify-content-center">
-            {
-              products.map((product) => (
-                <ProductCard
-                  key={ product.id }
-                  product={ product }
-                  cart={ cart }
-                  setCart={ setCart }
-                />))
-            }
-          </div>
-        </Row>
+    <div>
+      <Navbar />
+      <section
+        className="d-flex
+        justify-content-end
+        flex-wrap
+        w-100
+      "
+      >
+
+        <button
+          className="btn-viwe-cart
+          position-sticky
+          w-25"
+          data-testid="customer_products__button-cart"
+          type="button"
+          onClick={ () => history.push('/customer/checkout') }
+          disabled={ isDisabled }
+        >
+          <span> Ver Carrinho: R$ </span>
+          <span data-testid="customer_products__checkout-bottom-value">
+            {' '}
+            {totalPrice.toLocaleString('pt-br', {
+              style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2,
+            })}
+            {' '}
+          </span>
+        </button>
+        <div
+          className="d-flex
+        flex-wrap
+        gap-4
+        justify-content-center
+        container-card-products
+        h-100 w-100"
+        >
+          {
+            products.map((product) => (
+              <ProductCard
+                key={ product.id }
+                product={ product }
+                cart={ cart }
+                setCart={ setCart }
+              />))
+          }
+        </div>
       </section>
-    </Container>
+    </div>
   );
 }

@@ -7,11 +7,12 @@
   --off-white: #f5fbef;
 
   --green: #748b75;
+
 }
 
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-}
+} */
