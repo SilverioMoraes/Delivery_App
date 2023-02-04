@@ -99,7 +99,7 @@ export default function ProductCard({ product, cart, setCart }) {
           flex-wrap
           border border-light-subtle
           container-card
-          w-25 h-100"
+          cardDimension"
     >
       <section
         className="d-flex
@@ -140,16 +140,16 @@ export default function ProductCard({ product, cart, setCart }) {
       <section
         className="d-flex
         justify-content-center
-        border border-danger
         flex-wrap
         infCard
-        h-50
+        align-self-center
         "
       >
         <p
           className="d-flex
             justify-content-center
             flex-nowrap
+            nameProducts
           w-100"
           data-testid={ `customer_products__element-card-title-${product.id}` }
         >
@@ -160,10 +160,11 @@ export default function ProductCard({ product, cart, setCart }) {
           className="d-flex
         justify-content-center
         flex-nowrap
-        inputQuantity"
+        inputQuantity
+        "
         >
           <button
-            className="btbAddOrRemove
+            className="btnAddOrRemove
             rounded-start"
             data-testid={ `customer_products__button-card-add-item-${product.id}` }
             type="button"
@@ -173,8 +174,7 @@ export default function ProductCard({ product, cart, setCart }) {
           </button>
 
           <input
-            className="
-            w-25"
+            className="w-25"
             data-testid={ `customer_products__input-card-quantity-${product.id}` }
             value={ quantity }
             onChange={ ({ target: { value } }) => {
@@ -184,7 +184,7 @@ export default function ProductCard({ product, cart, setCart }) {
           />
 
           <button
-            className="btbAddOrRemove
+            className="btnAddOrRemove
             rounded-end"
             data-testid={ `customer_products__button-card-rm-item-${product.id}` }
             type="button"

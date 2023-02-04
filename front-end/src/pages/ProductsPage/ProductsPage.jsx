@@ -46,7 +46,6 @@ export default function ProductsPage() {
       <Navbar />
       <section
         className="d-flex
-        justify-content-end
         flex-wrap
         w-100
       "
@@ -54,8 +53,8 @@ export default function ProductsPage() {
 
         <button
           className="btn-viwe-cart
-          position-sticky
-          w-25"
+          btnPosition
+          "
           data-testid="customer_products__button-cart"
           type="button"
           onClick={ () => history.push('/customer/checkout') }
@@ -76,7 +75,8 @@ export default function ProductsPage() {
         gap-4
         justify-content-center
         container-card-products
-        h-100 w-100"
+        h-50 w-100
+        "
         >
           {
             products.map((product) => (
