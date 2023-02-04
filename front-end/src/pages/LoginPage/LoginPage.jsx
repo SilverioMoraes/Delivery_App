@@ -101,11 +101,11 @@ export default function LoginPage() {
       style={ { fontFamily: 'Roboto' } }
     >
       <Col
-        xs={ { offset: 2, size: 8 } }
+        xs={ { offset: 1, size: 10 } }
         sm={ { offset: 2, size: 8 } }
         md={ { offset: 3, size: 6 } }
         xl={ { offset: 4, size: 4 } }
-        className="d-flex flex-column p-0"
+        className="d-flex flex-column p-0 pt-4"
         style={ {
           backgroundColor: '#EAF1EFCC',
           borderRadius: '4px',
@@ -115,12 +115,12 @@ export default function LoginPage() {
       >
         <Row
           className="d-flex justify-content-center
-          align-items-center flex-column px-5 pt-5"
+          align-items-center flex-column px-5"
         >
 
-          <img src={ logo } alt="" className="w-25" />
+          <img src={ logo } alt="" className={ styles.logo } />
 
-          <h2 className="text-center pt-3">
+          <h2 className="text-center pt-1 mb-0">
             Login
           </h2>
 
@@ -179,7 +179,7 @@ export default function LoginPage() {
 
           <p
             data-testid="common_login__element-invalid-email"
-            className="text-center text-danger fw-bold pt-3"
+            className="text-center text-danger fw-bold pt-2"
           >
               &nbsp;
             { !doesUserExist && 'This email is invalid!' }

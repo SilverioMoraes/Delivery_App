@@ -92,7 +92,7 @@ function RegisterPage() {
       style={ { fontFamily: 'Roboto' } }
     >
       <Col
-        xs={ { offset: 2, size: 8 } }
+        xs={ { offset: 1, size: 10 } }
         sm={ { offset: 2, size: 8 } }
         md={ { offset: 3, size: 6 } }
         xl={ { offset: 4, size: 4 } }
@@ -107,10 +107,10 @@ function RegisterPage() {
 
         <Row
           className="d-flex justify-content-center
-          align-items-center flex-column px-5 pt-5"
+          align-items-center flex-column px-5 pt-4"
         >
 
-          <img src={ logo } alt="" className="w-25 d-block" />
+          <img src={ logo } alt="" className={ styles.logo } />
 
           <Label htmlFor="register-name-input" text="Nome">
             <Input
