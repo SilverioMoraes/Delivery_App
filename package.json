@@ -5,7 +5,10 @@
   "engines": {
     "node": ">=16.0.0"
   },
+  "homepage": "https://github.com/betrybe/sd-0x-project-delivery-app#readme",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "pm2": "./node_modules/.bin/pm2",
     "jest": "./node_modules/.bin/jest",
     "start": "./scripts/prepare-for-test.sh",
@@ -29,7 +32,6 @@
   "bugs": {
     "url": "https://github.com/betrybe/sd-0x-project-delivery-app/issues"
   },
-  "homepage": "https://github.com/betrybe/sd-0x-project-delivery-app#readme",
   "devDependencies": {
     "@faker-js/faker": "6.0.0",
     "axios": "0.26.1",
@@ -53,5 +55,8 @@
       "__TESTDESC__": true,
       "__TESTFILE__": true
     }
+  },
+  "dependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
